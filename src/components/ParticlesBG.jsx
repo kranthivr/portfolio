@@ -56,7 +56,7 @@ export default function ParticlesBG() {
             random: false,
             anim: {
               enable: false,
-              speed: 1,
+              speed: 0.5,
               opacity_min: 0.1,
               sync: false,
             },

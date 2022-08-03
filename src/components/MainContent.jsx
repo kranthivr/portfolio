@@ -1,6 +1,5 @@
 import { Box, Container, createTheme, Stack, Typography } from "@mui/material";
 import hbg from "../images/hero-background.jpg";
-import hbgxs from "../images/hbgxs.jpg";
 import profilePic from "../images/profilePic.jpg";
 import React from "react";
 
