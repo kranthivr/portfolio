@@ -32,6 +32,7 @@ function Projects() {
         <Card sx={{ maxWidth: 345 }}>
           <CardActionArea
             href="http://calculator-b528f.web.app/"
+            target="_blank"
             sx={{
               "&:hover": {
                 backgroundColor: "#90caf9",
@@ -59,6 +60,7 @@ function Projects() {
         <Card sx={{ maxWidth: 345 }}>
           <CardActionArea
             href="http://todo-5af0b.web.app/"
+            target="_blank"
             sx={{
               "&:hover": {
                 backgroundColor: "#90caf9",

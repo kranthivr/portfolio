@@ -85,7 +85,10 @@ function Contact() {
             Contact
           </Typography>
           <Box display="flex" justifyContent="center">
-            <IconButton href="https://www.linkedin.com/in/kranthi-vr-753646193/">
+            <IconButton
+              href="https://www.linkedin.com/in/kranthi-vr-753646193/"
+              target="_blank"
+            >
               <LinkedInIcon color="info" />
             </IconButton>
           </Box>
