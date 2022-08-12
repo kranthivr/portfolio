@@ -6,6 +6,7 @@ import React from "react";
 function MainContent() {
   return (
     <Stack
+      id="home"
       mt="60px"
       direction={{ xs: "column", md: "row-reverse" }}
       spacing={4}

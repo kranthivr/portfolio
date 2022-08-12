@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Stack } from "@mui/material";
 
-const pages = ["About", "Projects", "Contact"];
+const pages = ["Home", "About", "Projects", "Contact"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
