@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { projects } from "src/data";
+import { projects } from "../data";
 
 function Projects() {
   return (
