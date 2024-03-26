@@ -1,26 +1,25 @@
-import {
-  Box,
-  FormControl,
-  TextField,
-  InputLabel,
-  TextareaAutosize,
-  Stack,
-  Grid,
-  Link,
-  Button,
-  Snackbar,
-  Alert,
-  Typography,
-  IconButton,
-} from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
 import emailjs from "@emailjs/browser";
-import React, { useRef } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import SendIcon from "@mui/icons-material/Send";
+import {
+  Alert,
+  Button,
+  FormControl,
+  Grid,
+  IconButton,
+  Snackbar,
+  Stack,
+  TextField,
+  Typography,
+  Box,
+} from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
+import React, { useRef, useState } from "react";
 
 function Contact() {
-  const [open, setOpen] = React.useState(false);
-  const form = useRef();
+  const [open, setOpen] = useState(false);
+  const [sending, setSending] = useState(false);
+  const formRef = useRef();
 
   const handleClick = () => {
     setOpen(true);
@@ -34,14 +33,15 @@ function Contact() {
     setOpen(false);
   };
 
-  function sendEmail(e) {
+  async function sendEmail(e) {
     e.preventDefault();
 
-    emailjs
+    setSending(true);
+    await emailjs
       .sendForm(
-        "service_69689cg",
+        "service_f059lsw",
         "template_886ocgo",
-        form.current,
+        formRef.current,
         "OP_pbkl5Yjz0lpuqs"
       )
       .then(
@@ -50,9 +50,13 @@ function Contact() {
           e.target.reset();
         },
         (error) => {
+          alert("Some error occured!");
           console.log(error.text);
         }
-      );
+      )
+      .finally(() => {
+        setSending(false);
+      });
   }
   return (
     <Grid container id="contact">
@@ -61,7 +65,7 @@ function Contact() {
           You sent an Email to Kranthi
         </Alert>
       </Snackbar>
-      <Grid
+      {/* <Grid
         item
         xs={12}
         md={6}
@@ -75,7 +79,6 @@ function Contact() {
             textAlign="center"
             fontSize={60}
             fontStyle="Bold"
-            fontFamily="Roboto"
             sx={{
               backgroundColor: "#e0e0e0",
               borderRadius: "1rem",
@@ -93,12 +96,18 @@ function Contact() {
             </IconButton>
           </Box>
         </Stack>
-      </Grid>
-      <Grid item xs={12} md={6} padding={{ xs: 4, md: 4 }}>
-        <Typography textAlign="center" fontFamily="Roboto">
-          Contact Me
-        </Typography>
-        <form ref={form} onSubmit={sendEmail}>
+      </Grid> */}
+      <Grid item xs={12} md={6} padding={{ xs: 4, md: 4 }} marginX="auto">
+        <Stack direction="row" justifyContent="center" marginBottom="2">
+          <IconButton
+            href="https://www.linkedin.com/in/kranthi-vr-753646193/"
+            target="_blank"
+          >
+            <LinkedInIcon color="info" />
+          </IconButton>
+        </Stack>
+        <Typography textAlign="center">Email Me</Typography>
+        <form ref={formRef} onSubmit={sendEmail} autoComplete="off">
           <Stack spacing={2} margin={2}>
             <FormControl required>
               <TextField
@@ -143,7 +152,9 @@ function Contact() {
               variant="contained"
               type="submit"
               sx={{ width: "10rem", alignSelf: "center" }}
+              disabled={sending}
             >
+              {sending && <CircularProgress size="1rem" />}
               Send Mail <SendIcon sx={{ paddingLeft: 2 }} />
             </Button>
           </Stack>

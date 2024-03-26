@@ -35,9 +35,13 @@ function About() {
               padding: "5rem",
             }}
           >
-            I used React.js and Material UI to design these web pages. With
-            sound knowledge in JavaScript, HTML5 and CSS, I can develop
-            responsive, creative and interactive web designs.
+            Experienced Full Stack Developer with above 2.5 years of expertise
+            in Java Spring MVC and React, proficient in backend development,
+            RESTful APIs, and frontend development. Skilled in HTML, CSS,
+            JavaScript, and ORM frameworks. Proven track record of delivering
+            high-quality software solutions, collaborating with teams, and
+            optimizing performance. Strong problem-solving skills, good
+            communication, and self-motivated.
           </Typography>
         </Grid>
       </Grid>

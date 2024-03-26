@@ -1,7 +1,6 @@
-import { Box, Container, createTheme, Stack, Typography } from "@mui/material";
-import hbg from "../images/hero-background.jpg";
-import profilePic from "../images/profilePic.jpg";
-import React from "react";
+import { Box, Stack, Typography } from "@mui/material";
+import hbg from "/images/hero-background.jpg";
+import profilePic from "/images/profilePic.jpg";
 
 function MainContent() {
   return (
@@ -55,7 +54,7 @@ function MainContent() {
             d="m38.973 78.275 15.612-58.27 6.44 1.725L45.412 80z"
           />
         </svg>
-        Hi, I'm Kranthi <br /> Front End Developer
+        Hi, I'm Kranthi <br /> Full Stack Developer
       </Typography>
     </Stack>
   );
