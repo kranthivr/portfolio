@@ -16,3 +16,20 @@ export const projects = [
     picturePath: "images/todo.jpg",
   },
 ];
+
+export const xps = [
+  {
+    id: 1,
+    name: "Infosys",
+    designation: "Engineer",
+    startDate: "03/29/2021",
+    endDate: "05/23/2022",
+  },
+  {
+    id: 2,
+    name: "Centre for Good Governance",
+    designation: "Software Developer",
+    startDate: "09/07/2022",
+    endDate: "",
+  },
+];
