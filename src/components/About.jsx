@@ -67,7 +67,7 @@ function About() {
             }}
           >
             I'm a Full Stack Developer with <Box>{xpText}</Box> of experience in
-            Spring Boot, Sprng MVC, Hibernate and React. I have a proven track
+            Spring Boot, Spring MVC, Hibernate and React. I have a proven track
             record of delivering high-quality software solutions, optimizing
             performance and collaborating with teams. I possess strong
             problem-solving abilities, excel in communication and thrive on
