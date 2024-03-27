@@ -1,7 +1,7 @@
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import MainContent from "./components/MainContent";
+import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import ParticlesBG from "./components/ParticlesBG";
 import Projects from "./components/Projects";
@@ -11,7 +11,7 @@ function App() {
     <>
       <NavBar />
       <ParticlesBG />
-      <MainContent />
+      <Hero />
       <About />
       <Projects />
       <Contact />

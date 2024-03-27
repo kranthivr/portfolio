@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import hbg from "/images/hero-background.jpg";
 import profilePic from "/images/profilePic.jpg";
 
-function MainContent() {
+function Hero() {
   return (
     <Stack
       id="home"
@@ -60,4 +60,4 @@ function MainContent() {
   );
 }
 
-export default MainContent;
+export default Hero;
