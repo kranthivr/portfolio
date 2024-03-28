@@ -8,6 +8,8 @@ import {
   IconButton,
   Stack,
   Typography,
+  Box,
+  Alert,
 } from "@mui/material";
 import React from "react";
 import { projects } from "../data";
@@ -48,25 +50,42 @@ function Projects() {
               </Typography>
             </CardContent>
             <CardActions sx={{ display: "flex" }}>
-              <Button
-                size="small"
-                href={project.link}
-                target="_blank"
-                sx={{
-                  ":hover": { backgroundColor: "#bbdefb" },
-                }}
-              >
-                Visit
-              </Button>
-              <IconButton
-                href={project.gitrepo}
-                target="_blank"
-                sx={{
-                  ":hover": { backgroundColor: "#81c1f5" },
-                }}
-              >
-                <GitHubIcon fontSize="small" color="primary" />
-              </IconButton>
+              <Stack gap="2">
+                <Box>
+                  <Button
+                    size="small"
+                    href={project.link}
+                    target="_blank"
+                    sx={{
+                      ":hover": { backgroundColor: "#bbdefb" },
+                    }}
+                    disabled={!project.link}
+                  >
+                    Visit
+                  </Button>
+                  <IconButton
+                    href={project.gitrepo}
+                    target="_blank"
+                    sx={{
+                      ":hover": { backgroundColor: "#81c1f5" },
+                    }}
+                    disabled={!project.gitrepo}
+                  >
+                    <GitHubIcon
+                      fontSize="small"
+                      color={project.gitrepo ? "primary" : "disabled"}
+                    />
+                  </IconButton>
+                </Box>
+                <Box>
+                  <Alert
+                    sx={{ padding: "0 5px" }}
+                    severity={project.health ? "success" : "error"}
+                  >
+                    {project.status}
+                  </Alert>
+                </Box>
+              </Stack>
             </CardActions>
           </Card>
         ))}

@@ -6,6 +6,8 @@ export const projects = [
     link: "https://kranthivr.github.io/calculator/",
     gitrepo: "https://github.com/kranthivr/calculator",
     picturePath: "images/calculator.jpg",
+    status: "Deployed using github pages",
+    health: true,
   },
   {
     id: 2,
@@ -14,6 +16,18 @@ export const projects = [
     link: "https://kranthivr.github.io/todo/",
     gitrepo: "https://github.com/kranthivr/todo",
     picturePath: "images/todo.jpg",
+    status: "Deployed using github pages",
+    health: true,
+  },
+  {
+    id: 3,
+    name: "Issue Tracker",
+    description: `Full Stack Issue Tracker built using Next.js 13 with Typescript, Radix UI, Prisma ORM, React Hook Form, Zod Validation, Prisma ORM, Filtering, Sorting, Pagination and Next Auth.`,
+    link: "https://issue-tracker-seven-inky.vercel.app/",
+    gitrepo: "https://github.com/kranthivr/issue-tracker",
+    picturePath: "images/issue-tracker.png",
+    status: "Migrating DB",
+    health: false,
   },
 ];
 

@@ -70,7 +70,7 @@ function About() {
             Spring Boot, Spring MVC, Hibernate and React. I have a proven track
             record of delivering high-quality software solutions, optimizing
             performance and collaborating with teams. I possess strong
-            problem-solving abilities, excel in communication and thrive on
+            problem-solving abilities, good communication skills and thrive on
             self-motivation.
           </Box>
         </Grid>
