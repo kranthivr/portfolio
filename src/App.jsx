@@ -1,20 +1,25 @@
 import "./App.css";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
-import ParticlesBG from "./components/ParticlesBG";
+import { Routes, Route } from "react-router-dom";
+import Hero from "./components/Hero";
+import About from "./components/About";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import { Box } from "@mui/material";
 
 function App() {
   return (
     <>
       <NavBar />
-      <ParticlesBG />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
+      <Box marginTop="60px">
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/home" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Box>
     </>
   );
 }

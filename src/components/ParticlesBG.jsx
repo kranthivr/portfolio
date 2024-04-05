@@ -21,7 +21,7 @@ export default function ParticlesBG() {
       loaded={particlesLoaded}
       options={{
         fullScreen: {
-          enable: false,
+          enable: true,
           zIndex: 4,
         },
         particles: {

@@ -1,13 +1,13 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import NoUnderLineLink from "../utils/NoUnderLineLink";
 
 const pages = ["Home", "About", "Projects", "Contact"];
 
@@ -31,22 +31,7 @@ const NavBar = () => {
     >
       <Container maxWidth="xl">
         <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontWeight: 700,
-              letterSpacing: ".1rem",
-              color: "#000000",
-              textDecoration: "none",
-            }}
-          >
-            Kranthi
-          </Typography>
+          <NoUnderLineLink path="/">Kranthi</NoUnderLineLink>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -80,13 +65,12 @@ const NavBar = () => {
               }}
             >
               {pages.map((page) => (
-                <Button
+                <NoUnderLineLink
                   key={page}
-                  onClick={handleCloseNavMenu}
-                  href={`#${page.toLocaleLowerCase()}`}
+                  path={`${page.toLocaleLowerCase()}`}
                 >
                   <Typography textAlign="center">{page}</Typography>
-                </Button>
+                </NoUnderLineLink>
               ))}
             </Menu>
           </Box>
@@ -94,7 +78,7 @@ const NavBar = () => {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -113,20 +97,9 @@ const NavBar = () => {
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                href={`#${page.toLocaleLowerCase()}`}
-                sx={{
-                  my: 2,
-                  color: "#000000",
-                  "&:hover": {
-                    backgroundColor: "#8d8d8d",
-                  },
-                  margin: "10px",
-                }}
-              >
+              <NoUnderLineLink key={page} path={`${page.toLocaleLowerCase()}`}>
                 {page}
-              </Button>
+              </NoUnderLineLink>
             ))}
           </Box>
         </Toolbar>

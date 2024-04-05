@@ -21,6 +21,7 @@ function Projects() {
       alignItems="center"
       sx={{
         backgroundColor: "#aeaeae",
+        height: "100vh",
       }}
     >
       <Typography m={2}>
