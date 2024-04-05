@@ -24,8 +24,8 @@ function Projects() {
         height: "100vh",
       }}
     >
-      <Typography m={2}>
-        Here are a some of the web apps I have developed.
+      <Typography m={2} fontWeight="fontWeightBold">
+        Here are a some of my React web apps.
       </Typography>
       <Stack
         direction={{ xs: "column", sm: "row" }}

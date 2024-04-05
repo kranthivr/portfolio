@@ -40,9 +40,16 @@ function About() {
 
   return (
     <Box id="about">
-      <Grid container alignItems="center" justifyContent="center">
+      <Grid
+        direction="column"
+        container
+        alignItems="center"
+        justifyContent="center"
+        marginTop="5rem"
+      >
         <Grid item md={4}>
           <Typography
+            fontWeight="fontWeightBold"
             sx={{
               textAlign: "center",
               fontSize: { xs: "1rem", md: "1.5rem" },
@@ -63,7 +70,8 @@ function About() {
               fontSize: { xs: "1rem", md: "1.5rem" },
               fontFamily: "Nunito",
               color: "#424242",
-              padding: "5rem",
+              padding: { xs: "2rem", md: "5rem" },
+              maxWidth: { md: "50vw" },
             }}
           >
             I'm a Full Stack Developer with <Box>{xpText}</Box> of experience in

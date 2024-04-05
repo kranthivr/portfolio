@@ -6,13 +6,13 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import * as React from "react";
 import NoUnderLineLink from "../utils/NoUnderLineLink";
+import { useState } from "react";
 
 const pages = ["Home", "About", "Projects", "Contact"];
 
 const NavBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -66,6 +66,7 @@ const NavBar = () => {
                 <NoUnderLineLink
                   key={page}
                   path={`${page.toLocaleLowerCase()}`}
+                  handleCloseNavMenu={handleCloseNavMenu}
                 >
                   <Typography textAlign="center">{page}</Typography>
                 </NoUnderLineLink>

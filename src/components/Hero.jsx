@@ -19,6 +19,7 @@ function Hero() {
           alignItems: "center",
           justifyContent: "center",
           zIndex: 5,
+          pointerEvents: "none",
         }}
       >
         <Stack
@@ -32,12 +33,12 @@ function Hero() {
             color: "#424242",
             backgroundColor: "white",
             padding: "1rem 1rem",
-            height: { xs: "27rem", sm: "22rem", md: "15rem" },
+            height: { xs: "28rem", sm: "22rem", md: "15rem" },
             zIndex: 5,
             borderRadius: "1rem",
           }}
         >
-          <Box>
+          <Box textAlign="center">
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"

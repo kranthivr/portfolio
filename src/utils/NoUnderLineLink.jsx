@@ -1,12 +1,13 @@
 import { Button } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
-const NoUnderLineLink = ({ path, children }) => {
+const NoUnderLineLink = ({ path, children, handleCloseNavMenu }) => {
   return (
     <Button
       component={RouterLink}
       to={path}
       underline="hover"
+      onClick={handleCloseNavMenu}
       sx={{
         my: 2,
         color: "#000000",
