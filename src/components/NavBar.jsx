@@ -31,8 +31,6 @@ const NavBar = () => {
     >
       <Container maxWidth="xl">
         <Toolbar>
-          <NoUnderLineLink path="/">Kranthi</NoUnderLineLink>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -74,23 +72,6 @@ const NavBar = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontWeight: 700,
-              letterSpacing: ".1rem",
-              color: "#000000",
-              textDecoration: "none",
-            }}
-          >
-            Kranthi
-          </Typography>
           <Box
             justifyContent="flex-end"
             marginRight={5}

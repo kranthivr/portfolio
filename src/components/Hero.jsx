@@ -22,7 +22,7 @@ function Hero() {
         }}
       >
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           alignItems="center"
           fontWeight="fontWeightBold"
           gap={2}
@@ -32,7 +32,7 @@ function Hero() {
             color: "#424242",
             backgroundColor: "white",
             padding: "1rem 1rem",
-            height: { xs: "10rem", md: "15rem" },
+            height: { xs: "27rem", sm: "22rem", md: "15rem" },
             zIndex: 5,
             borderRadius: "1rem",
           }}
@@ -59,8 +59,8 @@ function Hero() {
             component="img"
             src={profilePic}
             sx={{
-              width: { xs: "10rem", md: "15rem" },
-              height: { xs: "10rem", md: "15rem" },
+              width: "12rem",
+              height: "12rem",
               borderRadius: "50%",
               border: "solid 2px black",
               zIndex: 5,
