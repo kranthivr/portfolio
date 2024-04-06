@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import NoUnderLineLink from "../utils/NoUnderLineLink";
+import NavBarLink from "../utils/NavBarLink";
 import { useState } from "react";
 
 const pages = ["Home", "About", "Projects", "Contact"];
@@ -25,7 +25,7 @@ const NavBar = () => {
   return (
     <AppBar
       sx={{
-        backgroundColor: "#bdbdbd",
+        backgroundColor: "white",
         height: "60px",
       }}
     >
@@ -63,25 +63,25 @@ const NavBar = () => {
               }}
             >
               {pages.map((page) => (
-                <NoUnderLineLink
+                <NavBarLink
                   key={page}
                   path={`${page.toLocaleLowerCase()}`}
                   handleCloseNavMenu={handleCloseNavMenu}
                 >
                   <Typography textAlign="center">{page}</Typography>
-                </NoUnderLineLink>
+                </NavBarLink>
               ))}
             </Menu>
           </Box>
           <Box
-            justifyContent="flex-end"
+            justifyContent="center"
             marginRight={5}
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
             {pages.map((page) => (
-              <NoUnderLineLink key={page} path={`${page.toLocaleLowerCase()}`}>
+              <NavBarLink key={page} path={`${page.toLocaleLowerCase()}`}>
                 {page}
-              </NoUnderLineLink>
+              </NavBarLink>
             ))}
           </Box>
         </Toolbar>

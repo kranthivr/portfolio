@@ -16,17 +16,10 @@ import { projects } from "../data";
 
 function Projects() {
   return (
-    <Stack
-      id="projects"
-      alignItems="center"
-      sx={{
-        backgroundColor: "#aeaeae",
-        height: "100vh",
-      }}
-    >
-      <Typography m={2} fontWeight="fontWeightBold">
-        Here are a some of my React web apps.
-      </Typography>
+    <Stack id="projects" alignItems="center">
+      <Box m={2} fontWeight="fontWeightBold">
+        Here are a some of my web apps developed with React.js and Next.js.
+      </Box>
       <Stack
         direction={{ xs: "column", sm: "row" }}
         justifyContent="center"
@@ -35,7 +28,19 @@ function Projects() {
         margin={4}
       >
         {projects.map((project) => (
-          <Card sx={{ maxWidth: 345 }} key={project.name}>
+          <Card
+            sx={{
+              maxWidth: 345,
+              boxShadow:
+                "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+              ":hover": {
+                cursor: "pointer",
+                boxShadow:
+                  "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
+              },
+            }}
+            key={project.name}
+          >
             <CardMedia
               component="img"
               height="140"

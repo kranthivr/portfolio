@@ -55,7 +55,6 @@ function About() {
               fontSize: { xs: "1rem", md: "1.5rem" },
               fontFamily: "Nunito",
               color: "#424242",
-              backgroundColor: "#ffffff",
               mx: "40px",
               zIndex: 1,
             }}

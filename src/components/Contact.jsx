@@ -12,6 +12,7 @@ import {
   TextField,
   Typography,
   Box,
+  Card,
 } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import React, { useRef, useState } from "react";
@@ -106,59 +107,63 @@ function Contact() {
             <LinkedInIcon color="info" />
           </IconButton>
         </Stack>
-        <Typography textAlign="center">Email Me</Typography>
-        <form ref={formRef} onSubmit={sendEmail} autoComplete="off">
-          <Stack spacing={2} margin={2}>
-            <FormControl required>
+        <Card sx={{ padding: "1rem" }}>
+          <Box textAlign="center" fontWeight="fontWeightBold">
+            Email Me
+          </Box>
+          <form ref={formRef} onSubmit={sendEmail} autoComplete="off">
+            <Stack spacing={2} margin={2}>
+              <FormControl required>
+                <TextField
+                  type="text"
+                  id="name"
+                  name="name"
+                  variant="outlined"
+                  label="Name"
+                  required
+                />
+              </FormControl>
+              <FormControl>
+                <TextField
+                  type="email"
+                  id="email"
+                  name="email"
+                  variant="outlined"
+                  label="Email"
+                  required
+                />
+              </FormControl>
+              <FormControl>
+                <TextField
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  variant="outlined"
+                  label="Subject"
+                  required
+                />
+              </FormControl>
               <TextField
-                type="text"
-                id="name"
-                name="name"
-                variant="outlined"
-                label="Name"
+                label="Message"
+                name="message"
+                multiline
+                minRows={6}
+                maxRows={20}
                 required
               />
-            </FormControl>
-            <FormControl>
-              <TextField
-                type="email"
-                id="email"
-                name="email"
-                variant="outlined"
-                label="Email"
-                required
-              />
-            </FormControl>
-            <FormControl>
-              <TextField
-                type="text"
-                id="subject"
-                name="subject"
-                variant="outlined"
-                label="Subject"
-                required
-              />
-            </FormControl>
-            <TextField
-              label="Message"
-              name="message"
-              multiline
-              minRows={10}
-              maxRows={20}
-              required
-            />
-            <Button
-              size="small"
-              variant="contained"
-              type="submit"
-              sx={{ width: "10rem", alignSelf: "center" }}
-              disabled={sending}
-            >
-              {sending && <CircularProgress size="1rem" />}
-              Send Mail <SendIcon sx={{ paddingLeft: 2 }} />
-            </Button>
-          </Stack>
-        </form>
+              <Button
+                size="small"
+                variant="contained"
+                type="submit"
+                sx={{ width: "10rem", alignSelf: "center" }}
+                disabled={sending}
+              >
+                {sending && <CircularProgress size="1rem" />}
+                Send Mail <SendIcon sx={{ paddingLeft: 2 }} />
+              </Button>
+            </Stack>
+          </form>
+        </Card>
       </Grid>
     </Grid>
   );
