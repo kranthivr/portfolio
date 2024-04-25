@@ -43,7 +43,7 @@ export const xps = [
     id: 2,
     name: "Centre for Good Governance",
     designation: "Software Developer",
-    startDate: "09/07/2022",
+    startDate: "09/08/2022",
     endDate: "",
   },
 ];
