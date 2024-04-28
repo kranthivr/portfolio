@@ -27,15 +27,16 @@ function About() {
     }, 0);
 
     const years = Math.floor(xpTime / (1000 * 60 * 60 * 24 * 365.25));
-    let months = Math.floor(xpTime / (1000 * 60 * 60 * 24 * 30.4375)) % 12;
-    let days = Math.floor(Math.floor(xpTime / (1000 * 60 * 60 * 24)) % 30.4375);
-    let hours = Math.floor(Math.floor(xpTime / (1000 * 60 * 60)) % 24);
-    let minutes = Math.floor(Math.floor(xpTime / (1000 * 60)) % 60);
-    let seconds = Math.floor(Math.floor(xpTime / 1000) % 60);
+    let months = Math.ceil(xpTime / (1000 * 60 * 60 * 24 * 30.4375)) % 12;
+    //let days = Math.floor(Math.floor(xpTime / (1000 * 60 * 60 * 24)) % 30.4375);
+    //let hours = Math.floor(Math.floor(xpTime / (1000 * 60 * 60)) % 24);
+    //let minutes = Math.floor(Math.floor(xpTime / (1000 * 60)) % 60);
+    //let seconds = Math.floor(Math.floor(xpTime / 1000) % 60);
 
     let monthsText = `${months.toString()} ${months > 1 ? "Months" : "Month"}`;
-    let daysText = `${days.toString()} ${days > 1 ? "Days" : "Day"}`;
-    return `${years} Years, ${monthsText}, ${daysText}`;
+    //let daysText = `${days.toString()} ${days > 1 ? "Days" : "Day"}`;
+
+    return `${years} Years, ${monthsText}`;
   }
 
   return (
